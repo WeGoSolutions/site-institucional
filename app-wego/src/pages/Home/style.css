@@ -1,0 +1,58 @@
+:root {
+  --first-color: #D4D9EE;
+  --second-color: #344CB7;
+  --third-color: #2A2E30;
+  --fourth-color: #FFC0D9;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  width: 100vw;
+  background-color: var(--first-color);
+  font-family: "Kumbh Sans";
+
+  .header {
+    background-color: var(--third-color);
+    height: 90px;
+    display: flex;
+    padding: 16px;
+    flex-direction: row;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+
+    .logo {
+      height: 100%;
+      color: var(--first-color);
+      font-size: 40px;
+      align-items: center;
+      flex-direction: column;
+      padding-right: 20px;
+      text-align: center;
+      line-height: 25px;
+      border-right: 5px solid var(--first-color);
+    }
+
+    .logo div:nth-child(2) {
+      padding-left: 24px;
+    }
+
+    ul {
+      color: var(--first-color);
+      display: flex;
+      flex-direction: row;
+      gap: 50px;
+      list-style: none;
+
+      li:nth-child(1){
+        margin-left: 40px;
+      }
+    }
+  }
+}
