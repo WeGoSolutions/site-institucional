@@ -1,11 +1,41 @@
 import React, { useEffect } from 'react';
-import waveImg from "../../assets/wave.svg";
-import waveReverseImg from "../../assets/wavereverse.svg";
+import waveImg from "../../assets/wave2.svg";
+import waveReverseImg from "../../assets/wavereverse2.svg";
 import linkExtImg from "../../assets/linkExt.svg";
+import testeImg from "../../assets/halftone-backg2.svg";
+import { Swiper } from 'swiper/react';
+import { GlobalStyle, Navbar, Logo, Ul, Anchor, SectionOne, Title, H1, H2, Baloons, Baloon, SectionTwo, ContainerLeft, Left, H11, P, Right, ContainerRight, LogoTitle, LogoTitleH1, SectionThree, H12, Card, Wave, SectionFour, Container, LeftContainer, H13, P1, Button, LinkExt, ProjectImages, SectionFive, WaveReverse, Shortcuts, UlShortcuts, Copyright, Map, ImgCarrossel, H14 } from "./style";
 
-import { GlobalStyle, Navbar, Logo, Ul, Anchor, SectionOne, Title, H1, H2, Baloons, Baloon, SectionTwo, ContainerLeft, Left, H11, P, Right, ContainerRight, LogoTitle, LogoTitleH1, SectionThree, H12, Card, Wave, SectionFour, Container, LeftContainer, H13, P1, Button, LinkExt, ProjectImages, SectionFive, WaveReverse, Shortcuts, UlShortcuts, Copyright, Map } from "./style";
+import { StyledSwiperSlide, Name, Function, Desc, Teste, Arrow } from './style';
 
 const Home = () => {
+    const data = [
+        {
+            id: 1, image: 'https://avatars.githubusercontent.com/u/160804980?v=4', nome: 'Antonio Felipe', cargo: 'Front-End',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime maiores quam, voluptates quibusdam facere aut quisquam      dignissimos possimus, neque ipsum, eaque ea tempora reiciendis autem accusantium voluptatem placeat adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptatum sunt excepturi sequi atque dignissimos odit reiciendis neque eos iure! Ab cumque, assumenda illo alias qui sint voluptatem nemo quos!'
+        },
+        {
+            id: 2, image: 'https://avatars.githubusercontent.com/u/122701467?v=4', nome: 'Guilherme Sousa', cargo: 'Back-End',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime maiores quam, voluptates quibusdam facere aut quisquam      dignissimos possimus, neque ipsum, eaque ea tempora reiciendis autem accusantium voluptatem placeat adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptatum sunt excepturi sequi atque dignissimos odit reiciendis neque eos iure! Ab cumque, assumenda illo alias qui sint voluptatem nemo quos!'
+        },
+        {
+            id: 3, image: 'https://avatars.githubusercontent.com/u/177654634?v=4', nome: 'Igor Chu', cargo: 'Tech-Lead',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime maiores quam, voluptates quibusdam facere aut quisquam      dignissimos possimus, neque ipsum, eaque ea tempora reiciendis autem accusantium voluptatem placeat adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptatum sunt excepturi sequi atque dignissimos odit reiciendis neque eos iure! Ab cumque, assumenda illo alias qui sint voluptatem nemo quos!'
+        },
+        {
+            id: 4, image: 'https://avatars.githubusercontent.com/u/160802109?v=4', nome: 'Laise Martin', cargo: 'Front-End',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime maiores quam, voluptates quibusdam facere aut quisquam      dignissimos possimus, neque ipsum, eaque ea tempora reiciendis autem accusantium voluptatem placeat adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptatum sunt excepturi sequi atque dignissimos odit reiciendis neque eos iure! Ab cumque, assumenda illo alias qui sint voluptatem nemo quos!'
+        },
+        {
+            id: 5, image: 'https://avatars.githubusercontent.com/u/161353790?v=4', nome: 'Naomi Yuumi', cargo: 'Project Oner',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime maiores quam, voluptates quibusdam facere aut quisquam      dignissimos possimus, neque ipsum, eaque ea tempora reiciendis autem accusantium voluptatem placeat adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptatum sunt excepturi sequi atque dignissimos odit reiciendis neque eos iure! Ab cumque, assumenda illo alias qui sint voluptatem nemo quos!'
+        },
+        {
+            id: 6, image: 'https://rlv.zcache.com.br/poster_rosto_scooby_doo_sorrindo-r27421e2266664c659a0f12d8939fd7d9_geub_8byvr_644.webp', nome: 'Cauan Araruna', cargo: 'DevOps',
+            desc: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ex maxime maiores quam, voluptates quibusdam facere aut quisquam      dignissimos possimus, neque ipsum, eaque ea tempora reiciendis autem accusantium voluptatem placeat adipisci. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis voluptatum sunt excepturi sequi atque dignissimos odit reiciendis neque eos iure! Ab cumque, assumenda illo alias qui sint voluptatem nemo quos!'
+        }
+    ]
+
     useEffect(() => {
         const element = document.getElementById("typing");
         const texts = ["WeGo", "Nós vamos"];
@@ -56,11 +86,15 @@ const Home = () => {
                     <H2>em direção ao futuro.</H2>
                 </Title>
 
+                <Teste src={testeImg}></Teste>
+
                 <Baloons>
                     <Baloon>Inovação</Baloon>
                     <Baloon>Soluções</Baloon>
                     <Baloon>Inteligência</Baloon>
                 </Baloons>
+
+                <Anchor href="#sobre-nos"><Arrow></Arrow></Anchor>
             </SectionOne>
 
             <SectionTwo id='sobre-nos'>
@@ -89,11 +123,24 @@ const Home = () => {
 
             <SectionThree id='equipe'>
                 <H12>Equipe</H12>
-                <Card></Card>
+                <Card>
+                    <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation={true} loop={true} autoplay={{ delay: 5000 }} style={{ width: '100%', height: '90%' }}>
+
+                        {data.map((item) => (
+                            <StyledSwiperSlide key={item.id}>
+                                <ImgCarrossel src={item.image} alt='Slider' className='slide-item' />
+                                <Name>{item.nome}</Name>
+                                <Function>{item.cargo}</Function>
+                                <Desc>{item.desc}</Desc>
+                            </StyledSwiperSlide>
+                        ))}
+                    </Swiper>
+                </Card>
                 <Wave src={waveImg}></Wave>
             </SectionThree>
 
             <SectionFour id='petinder'>
+                <H14>Nossos projetos</H14>
                 <Container>
                     <LeftContainer>
                         <H13>Conheça o PeTinder</H13>
