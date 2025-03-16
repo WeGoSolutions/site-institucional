@@ -8,10 +8,10 @@ import { SwiperSlide } from 'swiper/react';
 
 export const GlobalStyle = createGlobalStyle`
   :root {
-    --first-color: #D4D9EE;
-    --second-color: #344CB7;
-    --third-color: #2A2E30;
-    --fourth-color: #FFC0D9;
+    --primary-color: #D4D9EE;
+    --secondary-color: #344CB7;
+    --black-color: #2A2E30;
+    --softpink-color: #FFC0D9;
   }
 
   * {
@@ -29,7 +29,7 @@ export const GlobalStyle = createGlobalStyle`
 export const Navbar = styled.nav`
   height: 75px;
   width: 100vw;
-  background-color: var(--third-color);
+  background-color: var(--black-color);
   display: flex;
   padding: 16px;
   flex-direction: row;
@@ -41,14 +41,14 @@ export const Navbar = styled.nav`
 export const Logo = styled.div`
   height: 100%;
   width: 100px;
-  color: var(--first-color);
+  color: var(--primary-color);
   font-size: 34px;
   align-items: center;
   flex-direction: column;
   padding-right: 20px;
   text-align: center;
   line-height: 19px;
-  border-right: 5px solid var(--first-color);
+  border-right: 5px solid var(--primary-color);
   user-select: none;
 
   div:nth-child(2) {
@@ -57,7 +57,7 @@ export const Logo = styled.div`
 `;
 
 export const Ul = styled.ul`
-  color: var(--first-color);
+  color: var(--primary-color);
   display: flex;
   flex-direction: row;
   gap: 50px;
@@ -66,6 +66,17 @@ export const Ul = styled.ul`
   li:nth-child(1) {
     margin-left: 40px;
   }
+
+  a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+    &:hover {
+      color: var(--secondary-color);
+      transition: color 0.2s ease;
+    }
+  }
 `;
 
 export const Anchor = styled.a`
@@ -73,36 +84,40 @@ export const Anchor = styled.a`
   color: inherit;
 
   &:hover {
-    color: var(--second-color);
+    color: var(--secondary-color);
     transition: color 0.2s ease;
   }
 `;
 
 export const SectionOne = styled.section`
-  background-color: var(--first-color);
+  background-color: var(--primary-color);
   height: calc(100vh - 75px);
   width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: row;
+
+    a{
+      cursor: pointer;
+    }
 `;
 
 export const Title = styled.div`
   width: 50%;
   flex-direction: column;
   font-size: bold;
-  color: var(--second-color);
+  color: var(--secondary-color);
   margin-left: 76px;
   user-select: none;
 `;
 
 export const H1 = styled.h1`
   font-size: 115px;
-  border-right: 4px solid var(--second-color);
+  border-right: 4px solid var(--secondary-color);
   display: inline-block;
   overflow: hidden;
   white-space: nowrap;
-  border-right: 4px solid var(--second-color);
+  border-right: 4px solid var(--secondary-color);
   animation: blink 0.9s infinite;
   line-height: 107px;
   height: 115px;
@@ -125,7 +140,7 @@ export const Baloons = styled.div`
 export const Baloon = styled.div`
   height: 72px;
   width: 263px;
-  background-color: var(--third-color);
+  background-color: var(--black-color);
   border-radius: 15px;
   box-shadow: 7px 8px 2px rgba(15, 20, 26, 0.979);
   color: #FFFFFF;
@@ -133,15 +148,13 @@ export const Baloon = styled.div`
   justify-content: center;
   align-items: center;
   font-size: 33px;
-  animation: balaoflutuando 6s ease-in-out infinite;
-  // transition: background-color .5s ease; forma antiga 
+  animation: balaoflutuando 13s ease-in-out infinite;
   user-select: none;
 
   transition: box-shadow .2s ease;
-  box-shadow: 4px 4px var(--first-color), 4px 4px 0 1px black;
+  box-shadow: 4px 4px var(--primary-color), 4px 4px 0 1px black;
 
   &:hover {
-    // background-color: var(--second-color); forma antiga
     box-shadow: 4px 4px black;
   }
 
@@ -151,12 +164,8 @@ export const Baloon = styled.div`
 
   &:nth-child(2) {
     margin-left: 90px;
-    background-color: var(--second-color);
+    background-color: var(--secondary-color);
     animation-delay: 1s;
-
-    &:nth-child(2):hover {
-      // background-color: var(--third-color); forma antiga
-    }
   }
 
   &:nth-child(3) {
@@ -182,56 +191,60 @@ export const Baloon = styled.div`
   }
 `;
 
-export const Teste = styled.img`
+export const SnakeBG = styled.img`
   position: absolute;
-  top: 100px;
   width: 150%;
-  height: 90%;
-  left: -100px;
+  height: 100%;
   z-index: 0;
   opacity: 1;
-  clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
-  animation: reveal 10s linear infinite;
+  scale: 1;
+  // animation: reveal 10s linear infinite;
   @keyframes reveal {
-      0% {
-          clip-path: polygon(0 0, 0 100%, 0 100%, 0 0);
-      }
-      25% {
-          clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-      }
-      50% {
-          clip-path: polygon(25% 0, 75% 0, 75% 100%, 25% 100%);
-      }
-      75% {
-          clip-path: polygon(50% 0, 100% 0, 100% 100%, 50% 100%);
-      }
-      100% {
-          clip-path: polygon(75% 0, 100% 0, 100% 100%, 75% 100%);
-      }
+    0% {
+        clip-path: inset(0 100% 0 0);
+    }
+    50% {
+        clip-path: inset(0 0 0 0);
+    }
+    100% {
+        clip-path: inset(0 0 0 100%);
+    }
   }
 `;
 
 export const Arrow = styled.div`
   position: absolute;
-  bottom: 10px;
+  bottom: -30px;
   left: 50%;
   transform: translateX(-50%);
-  width: 50px;
-  height: 50px;
+  width: 160px;
+  height: 115px;
+  scale: .55;
   background: url(${backgroundArrow}) no-repeat center center;
-  animation: setaflutuando 2s infinite;
+  dosplay: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  // animation: setaflutuando 2s infinite;
 
-  @keyframes setaflutuando {
-
-  0%,
-  100% {
-    transform: translateY(0);
+  h1{
+    text-align: center;
+    font-size: 30px;
+    color: var(--secondary-color);
+    font-weight: 400;
   }
 
-  50% {
-    transform: translateY(20px);
-  }
-}
+    @keyframes setaflutuando {
+
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+
+    50% {
+      transform: translateY(20px);
+    }
+  } 
 `;
 
 export const SectionTwo = styled.section`
@@ -258,7 +271,7 @@ export const Left = styled.div`
   height: 100%;
   width: 50%;
   display: flex;
-  color: var(--first-color);
+  color: var(--primary-color);
   margin-left: 45px;
   align-self: center;
   flex-direction: column;
@@ -272,6 +285,10 @@ export const H11 = styled.h1`
 
 export const P = styled.p`
   font-size: 22px;
+
+  b{
+  font-weight: bold;
+  }
 `;
 
 export const Right = styled.div`
@@ -285,7 +302,7 @@ export const Right = styled.div`
 export const ContainerRight = styled.div`
   height: 80%;
   width: 65%;
-  background-color: var(--second-color);
+  background-color: var(--secondary-color);
   box-shadow: 7px 8px 2px rgba(15, 20, 26, 0.979);
   display: flex;
   align-items: center;
@@ -306,7 +323,7 @@ export const LogoTitle = styled.div`
 `;
 
 export const LogoTitleH1 = styled.h1`
-  color: var(--first-color);
+  color: var(--primary-color);
   font-size: 140px;
   line-height: 130px;
   user-select: none;
@@ -316,7 +333,7 @@ export const LogoTitleH1 = styled.h1`
 `;
 
 export const SectionThree = styled.section`
-  background-color: var(--third-color);
+  background-color: var(--black-color);
   height: 100vh;
   width: 100vw;
   background-image: url(${backgroundTwo});
@@ -332,7 +349,7 @@ export const SectionThree = styled.section`
 export const H12 = styled.h1`
     font-size: 40px;
     font-weight: bold;
-    color: var(--first-color);
+    color: var(--primary-color);
     position: absolute;
     align-self: center;
     top: 97px;
@@ -341,21 +358,21 @@ export const H12 = styled.h1`
 export const Card = styled.div`
     height: 73%;
     width: 80%;
-    background-color: var(--first-color);
+    background-color: var(--primary-color);
     border-radius: 16px;
     position: absolute;
     bottom: 20px;
 
     //estilizar a barra de mudança das fotos
     .swiper-pagination-bullet {
-      background-color: var(--second-color);
+      background-color: var(--secondary-color);
       width: 40px;
       height: 8px;
       border-radius: 3px;
     }
 
     .swiper-button-prev, .swiper-button-next {
-    color: var(--second-color);
+    color: var(--secondary-color);
     transition: transform 0.5s ease;
     }
 
@@ -373,7 +390,7 @@ export const Wave = styled.img`
 `;
 
 export const SectionFour = styled.section`
-    background-color: var(--fourth-color);
+    background-color: var(--softpink-color);
     height: 100vh;
     width: 100vw;
 `;
@@ -406,7 +423,7 @@ export const H14 = styled.h1`
     top: 70px;
     left: 50%;
     transform: translateX(-50%);
-    width: 302px;
+    width: 322px;
     align-self: center;
 `;
 
@@ -419,10 +436,10 @@ export const P1 = styled.p`
 export const Button = styled.button`
     height: 84px;
     width: 378px;
-    background-color: var(--third-color);
+    background-color: var(--black-color);
     box-shadow: 7px 8px 2px rgba(15, 20, 26, 0.979);
     border-radius: 15px;
-    color: var(--first-color);
+    color: var(--primary-color);
     font-size: 30px;
     font-weight: bold;
     display: flex;
@@ -433,7 +450,7 @@ export const Button = styled.button`
     transition: transform 0.7s ease, background-color 0.3s ease;
 
     &:hover {
-        background-color: var(--second-color);
+        background-color: var(--secondary-color);
         transform: scale(1.05);
     }
 `;
@@ -445,14 +462,15 @@ export const LinkExt = styled.img`
 
 export const ProjectImages = styled.div`
     align-self: center;
-    height: 80%;
+    height: 100%;
     width: 50%;
     background-image: url(${backgroundProject});
     background-repeat: no-repeat;
+    margin-top: 140px;
 `;
 
 export const SectionFive = styled.section`
-    background-color: var(--third-color);
+    background-color: var(--black-color);
     height: 75vh;
     width: 100vw;
     position: relative;
@@ -477,7 +495,7 @@ export const Shortcuts = styled.div`
 export const UlShortcuts = styled.ul`
     margin-left: 80px;
     margin-top: 120px;
-    color: var(--first-color);
+    color: var(--primary-color);
     display: flex;
     flex-direction: column;
     gap: 20px;
@@ -491,15 +509,26 @@ export const UlShortcuts = styled.ul`
 
     li:nth-child(1):hover,
     a:hover {
-      color: var(--second-color);
+      color: var(--secondary-color);
       transition: color 0.2s ease;
     }
+
+    a{
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+
+    &:hover {
+      color: var(--secondary-color);
+      transition: color 0.2s ease;
+    }
+  }
 `;
 
 export const Copyright = styled.p`
     font-size: 20px;
     font-weight: bold;
-    color: var(--first-color);
+    color: var(--primary-color);
     position: absolute;
     bottom: 3%;
     left: 3%;
@@ -548,13 +577,11 @@ export const Function = styled.h1`
 
 export const Desc = styled.h1`
   max-width: 47%;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 450;
   position: absolute;
   left: 25vw;
   top: 40%;
   user-select: none;
+  text-align: justify;
 `;
-
-//class="swiper-button-prev"
-//swiper-pagination swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizonta
