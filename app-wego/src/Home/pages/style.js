@@ -36,6 +36,8 @@ export const Navbar = styled.nav`
   align-items: center;
   font-size: 20px;
   font-weight: bold;
+  position: absolute;
+  z-index: 1000;
 `;
 
 export const Logo = styled.div`
@@ -91,7 +93,7 @@ export const Anchor = styled.a`
 
 export const SectionOne = styled.section`
   background-color: var(--primary-color);
-  height: calc(100vh - 75px);
+  height: 100vh;
   width: 100vw;
   display: flex;
   align-items: center;
@@ -250,7 +252,7 @@ export const Arrow = styled.div`
 export const SectionTwo = styled.section`
   height: 100vh;
   width: 100vw;
-  background-image: url(${backgroundOne});
+  background: linear-gradient(to bottom, var(--primary-color) 0%, var(--black-color) 50%);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: inherit;
@@ -263,7 +265,7 @@ export const ContainerLeft = styled.div`
   height: 86.42vh;
   width: 93.52vw;
   border-radius: 30px;
-  background-color: #2a2e30F2;
+  background-color: var(--black-color);
   display: flex;
 `;
 
@@ -284,7 +286,8 @@ export const H11 = styled.h1`
 `;
 
 export const P = styled.p`
-  font-size: 22px;
+  font-size: 1.5r;
+  text-align: justify;
 
   b{
   font-weight: bold;
@@ -336,23 +339,64 @@ export const SectionThree = styled.section`
   background-color: var(--black-color);
   height: 100vh;
   width: 100vw;
-  background-image: url(${backgroundTwo});
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: inherit;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
 `;
 
-export const H12 = styled.h1`
-    font-size: 40px;
-    font-weight: bold;
-    color: var(--primary-color);
+export const TextBackground = styled.div`
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     position: absolute;
-    align-self: center;
-    top: 97px;
+    top: -50px;
+
+    h1 {
+      font-size: 205px;
+      font-weight: bold;
+      font-family: "Kumbh Sans";
+      color: transparent;
+      -webkit-text-stroke: 4px #D4D9EE;
+      line-height: 1.2;
+      user-select: none;
+      line-height: 235px;
+      position: relative;
+      padding-bottom: 40px;
+    }
+
+    h1:nth-child(1) {
+      left: -40px;
+      // left: -727px; pensar - 1 e 3
+    }
+
+    h1:nth-child(2) {
+      left: -338px;
+    }
+
+    h1:nth-child(3) {
+      left: -40px;
+    }
+`;
+
+export const H12 = styled.h1`
+  height: 65px;
+  width: 199px;
+  position: absolute;
+  top: 7%;
+  background-color: var(--primary-color);
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1{
+    font-size: 35px;
+    font-weight: bold;
+    color: var(--black-color);
+  }
 `;
 
 export const Card = styled.div`
@@ -431,16 +475,17 @@ export const P1 = styled.p`
     color: #000000;
     font-size: 22px;
     font-weight: 550;
+    text-align: justify;
 `;
 
 export const Button = styled.button`
-    height: 84px;
-    width: 378px;
+    height: 74px;
+    width: 300px;
     background-color: var(--black-color);
     box-shadow: 7px 8px 2px rgba(15, 20, 26, 0.979);
     border-radius: 15px;
     color: var(--primary-color);
-    font-size: 30px;
+    font-size: 24px;
     font-weight: bold;
     display: flex;
     justify-content: space-evenly;
@@ -456,8 +501,8 @@ export const Button = styled.button`
 `;
 
 export const LinkExt = styled.img`
-    width: 30px;
-    height: 30px;
+    width: 27px;
+    height: 27px;
 `;
 
 export const ProjectImages = styled.div`
@@ -584,4 +629,9 @@ export const Desc = styled.h1`
   top: 40%;
   user-select: none;
   text-align: justify;
+`;
+
+export const Bold = styled.span`
+  color: #99AAF3;
+  font-weight: bold;
 `;

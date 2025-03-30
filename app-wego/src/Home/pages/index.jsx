@@ -5,7 +5,7 @@ import waveReverseImg from "../../assets/wavereverse2.svg";
 import linkExtImg from "../../assets/linkExt.svg";
 import snake from "../../assets/finalWave2.svg";
 import { Swiper } from 'swiper/react';
-import { GlobalStyle, Navbar, Logo, Ul, SectionOne, Title, H1, H2, Baloons, Baloon, SectionTwo, ContainerLeft, Left, H11, P, Right, ContainerRight, LogoTitle, LogoTitleH1, SectionThree, H12, Card, Wave, SectionFour, Container, LeftContainer, H13, P1, Button, LinkExt, ProjectImages, SectionFive, WaveReverse, Shortcuts, UlShortcuts, Copyright, Map, ImgCarrossel, H14, StyledSwiperSlide, Name, Function, Desc, SnakeBG , Arrow } from "./style";
+import { GlobalStyle, Navbar, Logo, Ul, SectionOne, Title, H1, H2, Baloons, Baloon, SectionTwo, ContainerLeft, Left, H11, P, Right, ContainerRight, LogoTitle, LogoTitleH1, SectionThree, H12, Card, Wave, SectionFour, Container, LeftContainer, H13, P1, Button, LinkExt, ProjectImages, SectionFive, WaveReverse, Shortcuts, UlShortcuts, Copyright, Map, ImgCarrossel, H14, StyledSwiperSlide, Name, Function, Desc, SnakeBG , Arrow , TextBackground, Bold } from "./style";
 
 const Home = () => {
     const data = [
@@ -101,13 +101,13 @@ const Home = () => {
                     <Left>
                         <H11>WeGo Solutions</H11>
                         <P>
-                        Criada com a missão de desenvolver soluções tecnológicas inovadoras que impactam positivamente a sociedade. Combinamos tecnologia e propósito para criar aplicações intuitivas e eficientes, sempre focadas na experiência do usuário e na resolução de desafios reais.
+                        Criada para desenvolver <Bold>soluções</Bold> tecnológicas inovadoras, a WeGo combina <Bold>tecnologia</Bold> e <Bold>propósito</Bold> para criar aplicações intuitivas e eficientes, focadas na <Bold>experiência do usuário</Bold> e na <Bold>resolução</Bold> de desafios reais.
                         </P>
                         <P>
-                        Fundada por estudantes da SPTech, a WeGo surgiu da união de talentos que,atuando como estagiários em diferentes empresas, compartilharam a visão de transformar o mundo por meio da tecnologia. Aplicamos metodologias ágeis e inovação contínua para desenvolver soluções escaláveis, conectando pessoas e otimizando processos.
+                        Fundada por estudantes da <Bold>SPTech</Bold>, surgiu da união de talentos que, como estagiários em diferentes empresas, compartilharam a <Bold>visão</Bold> de transformar o mundo por meio da tecnologia. Utilizamos metodologias ágeis e inovação contínua para desenvolver <Bold>soluções escaláveis</Bold>, conectando pessoas e <Bold>otimizando processos</Bold>.
                         </P> 
                         <P>
-                        Acreditamos que a tecnologia tem o poder de gerar impacto e promover um futuro mais inteligente e acessível. Nosso compromisso é entregar projetos de qualidade, impulsionando mudanças significativas em diversos setores.
+                        Acreditamos no impacto da tecnologia para um <Bold>futuro</Bold> mais <Bold>inteligente</Bold> e <Bold>acessível</Bold> entregando projetos de qualidade que impulsionam mudanças significativas.
                         </P>
                     </Left>
 
@@ -123,7 +123,15 @@ const Home = () => {
             </SectionTwo>
 
             <SectionThree id='equipe'>
-                <H12>Equipe</H12>
+                <TextBackground>
+                    <h1>WeGoWeGoWeGoWeGo</h1>
+                    <h1>WeGoWeGoWeGoWeGo</h1>
+                    <h1>WeGoWeGoWeGoWeGo</h1>
+                </TextBackground>
+                
+                <H12>
+                    <h1>Equipe</h1>
+                </H12>
                 <Card>
                     <Swiper slidesPerView={1} pagination={{ clickable: true }} navigation={true} loop={true} autoplay={{ delay: 5000 }} style={{ width: '100%', height: '90%' }}>
 
