@@ -286,7 +286,7 @@ export const H11 = styled.h1`
 `;
 
 export const P = styled.p`
-  font-size: 1.5r;
+  font-size: 1.5rem;
   text-align: justify;
 
   b{
@@ -382,10 +382,10 @@ export const TextBackground = styled.div`
 `;
 
 export const H12 = styled.h1`
-  height: 65px;
-  width: 199px;
+  height: 60px;
+  width: 180px;
   position: absolute;
-  top: 7%;
+  top: 13%;
   background-color: var(--primary-color);
   border-radius: 50px;
   display: flex;
@@ -396,16 +396,17 @@ export const H12 = styled.h1`
     font-size: 35px;
     font-weight: bold;
     color: var(--black-color);
+    user-select: none;
   }
 `;
 
 export const Card = styled.div`
-    height: 73%;
+    height: 75%;
     width: 80%;
     background-color: var(--primary-color);
     border-radius: 16px;
     position: absolute;
-    bottom: 20px;
+    bottom: 3px;
 
     //estilizar a barra de mudança das fotos
     .swiper-pagination-bullet {
@@ -414,6 +415,10 @@ export const Card = styled.div`
       height: 8px;
       border-radius: 3px;
     }
+
+    .swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal{
+      bottom: 15%;
+      }
 
     .swiper-button-prev, .swiper-button-next {
     color: var(--secondary-color);
@@ -473,7 +478,7 @@ export const H14 = styled.h1`
 
 export const P1 = styled.p`
     color: #000000;
-    font-size: 22px;
+    font-size: 23px;
     font-weight: 550;
     text-align: justify;
 `;
@@ -594,6 +599,7 @@ export const StyledSwiperSlide = styled(SwiperSlide)`
     display: flex;
     align-items: center;
     left: 10%;
+    bottom: 6%;
 `;
 
 export const ImgCarrossel = styled.img`
@@ -633,5 +639,10 @@ export const Desc = styled.h1`
 
 export const Bold = styled.span`
   color: #99AAF3;
+  font-weight: bold;
+`;
+
+export const BoldPetinder = styled.span`
+  color: #A01A4F;
   font-weight: bold;
 `;
