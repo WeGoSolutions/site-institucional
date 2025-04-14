@@ -12,33 +12,33 @@ const Home = () => {
         {
             id: 1, image: 'https://avatars.githubusercontent.com/u/160804980?v=4', nome: 'Antonio Felipe', cargo: 'Front-End',
             desc: 'Com habilidades diversificadas em tecnologia, atualmente o foco está no desenvolvimento e aplicação de soluções no front-end. Onde o objetivo é criar interfaces modernas,  interativas e centradas na experiência do usuário, utilizando práticas de UI/UX como prototipação e ajustes contínuos no design para garantir a melhor usabilidade. Ao combinar essas abordagens, os produtos não só atendem às necessidades específicas dos usuários, mas também proporcionam uma navegação fluida, intuitiva e envolvente, visando otimizar a interação e a satisfação do usuário em todos os pontos de contato.',
-            ariaDesc: 'Homem branco, cabelos curtos e barba. Veste roupa preta com escritas em branco. Olha diretamente para a câmera com uma expressão neutra.'
+            ariaDesc: 'Homem de pele clara, com barba curta e cabelos castanhos, ondulados e curtos. Está de frente para a câmera, com expressão neutra. Veste uma camiseta preta com estampa branca.'
         },
         {
             id: 2, image: 'https://avatars.githubusercontent.com/u/160186899?v=4', nome: 'Cauan Araruna', cargo: 'DBA',
             desc: 'Envolvido no planejamento estratégico do gerenciamento de dados, assegurando eficiência e organização no armazenamento. Inclui também a coleta de informações para garantir que os dados coletados estejam condizentes com a realidade do cliente, devidamente estruturados e armazenados com segurança. Além disso, realiza o desenvolvimento de wireframes e visualizações, ajustando o fluxo do sistema e a experiência do usuário, garantindo que as soluções entregues estejam sempre em sintonia com os dados processados e as necessidades do projeto.',
-            ariaDesc: 'Falta adicionar desc'
+            ariaDesc: 'Homem de pele morena, com cabelos curtos e escuros. Veste uma camisa preta com gola branca. Está de frente para a câmera, com uma expressão neutra e olhar direto.'
 
         },
         {
             id: 3, image: 'https://avatars.githubusercontent.com/u/122701467?v=4', nome: 'Guilherme Sousa', cargo: 'Back-End',
             desc: 'Com experiência sólida no back-end, a atuação envolve a criação de soluções eficientes e escaláveis, garantindo a integração entre diferentes sistemas e camadas da aplicação. O foco está na construção de endpoints que facilitam o gerenciamento de dados essenciais, como informações de usuários e arquivos, além de otimizar a forma como esses dados são armazenados e acessados. A utilização de boas práticas de comunicação entre os serviços assegura que o sistema seja ágil, seguro e responsivo, atendendo às necessidades dos usuários e equipe de forma eficaz.',
-            ariaDesc: 'Falta adicionar desc'
+            ariaDesc: 'Homem de pele clara, com cabelos castanhos, curtos e cacheados. Usa óculos de armação preta e veste uma camiseta cinza. Está de frente para a câmera, sorrindo amplamente.'
         },
         {
             id: 4, image: 'https://avatars.githubusercontent.com/u/177654634?v=4', nome: 'Igor Chu', cargo: 'Tech-Lead',
             desc: 'Um desenvolvedor full stack e líder tecnológico, conhecido por sua abordagem positiva e proativa. Com experiência em diversas tecnologias, ele se destaca na criação de soluções inovadoras e na liderança de times, sempre incentivando a colaboração e o crescimento profissional. Seu foco está em desenvolver produtos de alto impacto, garantindo qualidade, performance e usabilidade. Além disso, ele tem paixão por tecnologia e está sempre em busca de novos desafios para impulsionar sua carreira e contribuir para o sucesso das equipes com as quais trabalha.',
-            ariaDesc: 'Falta adicionar desc'
+            ariaDesc: 'Homem de pele morena clara, com cabelos pretos, cacheados e volumosos. Usa óculos de grau com armação redonda e fina. Está sorrindo, de frente para a câmera. Veste uma camisa branca de botão.'
         },
         {
             id: 5, image: 'https://avatars.githubusercontent.com/u/160802109?v=4', nome: 'Laise Martin', cargo: 'Front-End',
             desc: 'Focada no desenvolvimento front-end, está constantemente aprendendo novas abordagens e técnicas para aprimorar a criação de interfaces. Seus feitos envolvem a construção de componentes essenciais para a interação do usuário, sempre priorizando a usabilidade e a estética. Além de se envolver ativamente em outras etapas do processo de negócios, como documentação e elicitação de requisitos, assegurando que todas as soluções estejam alinhadas às necessidades e expectativas do projeto.',
-            ariaDesc: 'Falta adicionar desc'
+            ariaDesc: 'Mulher de pele clara, com cabelos longos, ondulados e castanhos. Está usando uma camiseta preta e segura o celular com a mão direita, tirando uma selfie em frente a um espelho. Seu olhar está levemente direcionado para o lado.'
         },
         {
             id: 6, image: 'https://avatars.githubusercontent.com/u/161353790?v=4', nome: 'Naomi Calisto', cargo: 'Project Owner',
             desc: 'Atuando na gestão estratégica das demandas do projeto, com foco na entrega dos requisitos para garantir que as soluções atendam às reais necessidades dos clientes. O contato direto com o cliente final permite entender suas expectativas e traduzir isso em requisitos claros e objetivos. Além disso, o gerenciamento dos processos é feito de forma eficiente, assegurando que as etapas do projeto sejam devidamente cumpridas e com alta qualidade. O relacionamento saudável com a equipe é sempre priorizado, promovendo uma comunicação aberta e colaborativa, essencial para o sucesso do projeto.',
-            ariaDesc: 'Falta adicionar desc'
+            ariaDesc: 'Mulher de pele morena clara, com cabelos curtos, pretos e cacheados. Usa óculos de grau com armação arredondada e brincos de argola. Está sorrindo e olha diretamente para a câmera. Veste uma blusa branca com gola alta e abertura frontal na região do colo.'
         }
     ]
 
